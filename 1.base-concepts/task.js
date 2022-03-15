@@ -7,7 +7,7 @@ function solveEquation(a, b, c) {
   const d = b * b - 4 * a * c;
 
   if(d < 0) {
-    return arr;
+    arr = [];
   } else if (d === 0) {
     x = -b / (2 * a);
     arr.push(x1);
@@ -17,6 +17,7 @@ function solveEquation(a, b, c) {
     x2 = (-b - Math.sqrt(d)) / (2 * a);
     arr.push(x2);
   }
+  return arr;
 }
 
 function calculateTotalMortgage(percent, contribution, amount, date) {
