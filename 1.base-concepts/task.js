@@ -1,22 +1,22 @@
 "use strict"
 function solveEquation(a, b, c) {
-  if (a==0) return alert("Ошибка, а=0 - недопустимое значение!");
-
   let arr = [];
-  const D = b*b-4*a*c;
-  let x1, x2;
-  arr[0] = x1;
-  arr[1] = x2;
-  if(D>0) {
-    x1 = (-b+Math.sqrt(D))/(2*a);
-    x2 = (-b-Math.sqrt(D))/(2*a); 
-    return arr;
+  let x1 = 0;
+  let x2 = 0;
 
-  } else if(D==0) {
-    x1 = -b/(2+a);
+  const d = b * b - 4 * a * c;
+
+  if(d < 0) {
     return arr;
-    
-  } else if(D<0) return "Корней нет"
+  } else if (d === 0) {
+    x = -b / (2 * a);
+    arr.push(x1);
+  } else {
+    x1 = (-b + Math.sqrt(d)) / (2 * a);
+    arr.push(x1);
+    x2 = (-b - Math.sqrt(d)) / (2 * a);
+    arr.push(x2);
+  }
 }
 
 function calculateTotalMortgage(percent, contribution, amount, date) {
